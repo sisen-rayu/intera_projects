@@ -1,0 +1,44 @@
+/* @media (max-width: 1439.98px) {
+    html:not(.capds-html--fixed) .capds-product-container section,html:not(.capds-html--fixed) body {
+        -webkit-overflow-scrolling:touch;
+        -ms-scroll-chaining: none;
+        overscroll-behavior: none
+    }
+} */
+
+@media (max-width: 2000px) {
+    html {
+        overflow-x:hidden
+    }
+}
+
+body {
+    overscroll-behavior: none;
+    overflow-x: hidden
+}
+
+.intro {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.intro-heading {
+    color: white;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 10px;
+}
+
+.intro video {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+/* スライドの親要素をposition:fixedで配置し、高さを100vh、overflow: hidden */

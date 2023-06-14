@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: #bb767a;
+    display: grid;
+    place-items: center;
+}
+
+.fill {
+    position: relative;
+    background-image: url("http://source.unsplash.com/random/250×250");
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    object-fit: cover;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    // box-sizing: border-box;
+}
+
+// わからないポイント
+// なんでtop,leftを指定しているのか
+
+.empty {
+    display: inline-block;
+    width: 260px;
+    height: 260px;
+    border: 2px solid rgb(167, 150, 137);
+    background-color: rgb(61, 57, 57);
+    margin: 10px;
+    // box-sizing: border-box;
+}
+
+.hold {
+    border: 4px solid #ccc;
+}
+
+.hovered {
+    background-color: #f4f4f4;
+    border-style: dotted;
+}
+
+.invisible {
+    display: none;
+}

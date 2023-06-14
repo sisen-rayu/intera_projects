@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+// @use './modules/index';
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #f8e7d9;
+}
+
+.heading {
+    color: #f8e7d9;
+}
+
+body {
+    height: 100vh;
+    background-color: #bb767a;
+    display: grid;
+    place-items: center;
+}
+
+.fill {
+    position: relative;
+    background-image: url("https://sisen-rayu.github.io/intera6_drag/images/latte.jpg");
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    object-fit: cover;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+    // box-sizing: border-box;
+}
+
+// わからないポイント
+// なんでtop,leftを指定しているのか
+
+.empty {
+    display: inline-block;
+    width: 260px;
+    height: 260px;
+    border: 2px solid rgb(167, 150, 137);
+    background-color: #f8e7d9;
+    margin: 10px;
+    // box-sizing: border-box;
+}
+
+.hold {
+    border: 4px solid #ccc;
+}
+
+.hovered {
+    background-color: #f8e7d9;
+    border-style: dotted;
+}
+
+.invisible {
+    display: none;
+}

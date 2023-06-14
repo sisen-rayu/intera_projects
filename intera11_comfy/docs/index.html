@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intera11</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script type="module" crossorigin src="./assets/index-a544a56d.js"></script>
+    <link rel="stylesheet" href="./assets/index-4290bc0b.css">
+  </head>
+  <body>
+    <main class="main">
+      <h1>心地よいを考えてみる(カルーセルUI)</h1>
+      <div id="image-carousel" class="splide" aria-label="お気に入りの写真">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <img src="./assets/banner1-3bafd9de.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/banner2-2a87c82b.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/banner3-ca6439ed.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/banner1-3bafd9de.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/banner2-2a87c82b.jpg" alt="">
+            </li>
+            <li class="splide__slide">
+              <img src="./assets/banner3-ca6439ed.jpg" alt="">
+            </li>
+          </ul>
+        </div>
+        <button class="splide__toggle" type="button">
+          <svg
+            class="splide__toggle__play"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m22 12-20 11v-22l10 5.5z"/>
+          </svg>
+          <svg
+            class="splide__toggle__pause"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1v22h7v-22zm13 0v22h7v-22z"/>
+          </svg>
+        </button>
+        <!-- <div class="splide-controller">
+          <ul class="splide__pagination splide__pagination--ltr" role="tablist" aria-label="Select a slide to show">
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide01" aria-label="Go to slide 1" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page is-active" type="button" role="tab" aria-controls="splide01-slide02" aria-label="Go to slide 2" aria-selected="true"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide03" aria-label="Go to slide 3" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide04" aria-label="Go to slide 4" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide05" aria-label="Go to slide 5" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide06" aria-label="Go to slide 6" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide07" aria-label="Go to slide 7" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide08" aria-label="Go to slide 8" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide09" aria-label="Go to slide 9" tabindex="-1"></button></li>
+            <li role="presentation"><button class="splide__pagination__page" type="button" role="tab" aria-controls="splide01-slide10" aria-label="Go to slide 10" tabindex="-1"></button></li>
+          </ul>
+        </div> -->
+      </div>
+
+      <section class="opinion">
+        <h2 class="opinion_heading">パッと思いつくストレスたち</h2>
+        <ul class="opinion_list">
+          <li>重すぎるサイト　zara ロエベ ハパクリスティ</li>
+          <li>挙動の始まりがモッサリしている</li>
+          <li>遷移が遅い（何秒で遅いと感じるのか）</li>
+          <li>欲しい情報が見つからない</li>
+          <li>ボタンを押したが遷移が遅く、ボタンが押下できているかどうか微妙</li>
+          <li>モーダルを開き、閉じると結構なページまで戻ってしまう</li>
+          <li>やたらとポップアップが出る</li>
+          <li>カルーセルで情報が読めない　某飲料top</li>
+        </ul>
+        <h2 class="opinion_heading">気になる統計</h2>
+        <ul class="opinion_list">
+          <li>ページ遷移に何秒かかると人は遅いとストレスに感じるのか</li>
+          <!-- <li>ポップアップの適切なタイミング</li> -->
+          <li>動く情報はどの程度人が認知することができるのか</li>
+        </ul>
+        <h2 class="opinion_heading">結論こうらしい</h2>
+        <ul class="opinion_list">
+          <li>遷移に関しては3秒以内<a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/mobile-page-speed-new-industry-benchmarks/" target="_blank">表示速度と直帰率(google英文)</a></li>
+          <li>表示に3秒かかると、直帰の確率は32%増加,表示に5秒かかると、直帰の確率は90%増加表示に6秒かかると、直帰の確率は106%増加表示に10秒かかると、直帰の確率は123%増加</li>
+          <li>1秒で10文字以内を目指す</li>
+          <li>文字の大きさは16pxが好ましい</li>
+          <li>バナーの数は3-5が好ましい→短期記憶で処理できる量</li>
+          <li>→バナーの数は3-5までが好ましい？</li>
+          <li>文字の大きさは16pxが良い</li>
+        </ul>
+        <p class="opinion_text">
+          (引用)人の記憶のうち、短期的に保持される記憶のことを「短期記憶」といいます。ミズーリ大学の心理学教授、ネルソン・コーワン氏の研究によると、短期記憶で処理できる情報量は4±1個程度だそうです。これに従えば、4±1を越える情報を探させたり、選ばせたりすると、短期記憶が使えず、脳の負荷が高まると考えられます。逆に、4±1より少なくすれば、脳への負荷が減り、認知が容易になり、結果的に使いやすく感じる可能性が高まるともいえます。
+        </p>
+        <p class="opinion_text">
+          (引用)一般に人の読みの能力に関しては，適切な条件下で1回の視線の停留で読めるのは漢字かな混じり文で3.5文字程度である。停留は平均して300m秒程度必 要でなおかつ眼球の移動（跳躍運動）に数10m秒必要なことから，静止した文章でも1秒間に読める文字数は10文字程度となる。実際には，変化したり移動 したりする文字では，読みの速度がさらに低下すると考えられるので，1秒間で5文字程度と考えることができる。（『JIS X 8341-3:2004 「高齢者・障害者等配慮設計指針－情報通信における機器，ソフトウェア及びサービス－ 第３部：ウェブコンテンツ」 技術解説　第1.1版　委員会ワーキングドラフト（7月22日版）』より）
+        </p>
+       
+      </section>
+    </main>
+    
+  </body>
+</html>

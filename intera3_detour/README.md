@@ -1,1 +1,0 @@
-# intera3_detour

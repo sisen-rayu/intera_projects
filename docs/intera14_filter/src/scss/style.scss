@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Zen+Kaku+Gothic+New:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  position: relative;
+  background-color: antiquewhite;
+}
+
+.wrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+
+// ===================================================================
+// image_board
+// ===================================================================
+.select {
+  margin-top: 60px;
+  &_list {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &_button {
+    background-color: pink;
+    color: #fff;
+    text-align: center;
+    list-style: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    filter: brightness(1);
+    transition: filter 0.3s;
+    &:hover {
+      filter: brightness(1.15);
+    }
+    &:active {
+      filter: brightness(0.85);
+    }
+  }
+}
+.board {
+  margin-top: 80px;
+  &_list {
+    list-style: none;
+    // width: 860px;
+    width: 100%; /* レスポンシブ対応のため幅を100%に変更 */
+    max-width: 860px; /* 最大幅を指定 */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &_item {
+    transition: filter 0.3s ease;
+    filter: brightness(0.8); 
+    &:hover {
+      filter: brightness(1); 
+    }
+  }
+}
+
+/* ブレイクポイント800px以下の場合のスタイル */
+@media (max-width: 890px) {
+  .board_list {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 420px) {
+  .board_list {
+    max-width: 200px;
+  }
+}
+
+
+

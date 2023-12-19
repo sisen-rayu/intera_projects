@@ -6,14 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>intera16_free</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
   </head>
   <body>
     <main class="main">
       <section class="sec1">
         <h1 class="h1">ふるえ</h1>
-        <button class="button" id="vibrateButton">button</button>
+        <!-- <button class="button" id="vibrateButton">button</button> -->
+        <div id="wave"></div>
+        <button id="playPauseButton" class="custom-button rythm-bass">再生</button>
+        
+        <script src="https://unpkg.com/wavesurfer.js"></script>
+        <!-- <script>
+        var wavesurfer = WaveSurfer.create({
+            container: '#wave', // 波形を表示するコンテナのID
+            waveColor: 'blue', // 波形の色を指定（例: 'blue'）
+            progressColor: 'purple', // 進捗バーの色を指定（例: 'purple'）
+        });
+
+        // MP3ファイルを読み込む
+        wavesurfer.load('./images/73_bpm78.mp3');
+
+
+        </script> -->
       </section>
     </main>
     <script type="module" src="./js/main.js"></script>
+
   </body>
 </html>

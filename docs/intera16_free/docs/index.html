@@ -6,16 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>intera16_free</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script type="module" crossorigin src="./assets/index-da4889df.js"></script>
-    <link rel="stylesheet" href="./assets/index-9668d480.css">
+    <script type="module" crossorigin src="./assets/index-5bad3f58.js"></script>
+    <link rel="stylesheet" href="./assets/index-e55fea35.css">
   </head>
   <body>
     <main class="main">
       <section class="sec1">
-        <h1 class="h1">ふるえ</h1>
-        <button class="button" id="vibrateButton">button</button>
+        <h1 class="h1">rhythm</h1>
+        <!-- <button class="button" id="vibrateButton">button</button> -->
+        <div id="wave"></div>
+        <button id="playPauseButton" class="button rythm-bass">start</button>
+        <div class="rythm-bass">あいう</div>
+        <div class="dot js-move">
+          <div class="maru rythm-medium">
+            <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+              <g transform="translate(153.68674850463867, 12.412059783935547)">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color: rgb(194, 229, 156);"></stop>
+                    <stop offset="100%" style="stop-color: rgb(100, 179, 244);"></stop>
+                  </linearGradient>
+                </defs>
+                <path class="blob" fill="url(#gradient)">
+                  <animate attributeName = "d"
+                  dur = "10000ms"
+                  repeatCount = "indefinite"
+                  values =
+                  "M443.5,320Q416,390,346,395Q276,400,203,428.5Q130,457,93.5,388.5Q57,320,37,242.5Q17,165,86,125.5Q155,86,222.5,53.5Q290,21,362.5,58Q435,95,453,172.5Q471,250,443.5,320Z;
+                  M411.5,321Q419,392,352.5,423Q286,454,226,425Q166,396,132.5,350.5Q99,305,103,251.5Q107,198,123.5,128.5Q140,59,211.5,62Q283,65,339,97Q395,129,399.5,189.5Q404,250,411.5,321Z;
+                  M442,321.5Q421,393,349,399.5Q277,406,221,401.5Q165,397,96.5,364Q28,331,58,261Q88,191,121.5,138Q155,85,224,45Q293,5,333.5,75.5Q374,146,418.5,198Q463,250,442,321.5Z;
+                  M410.5,302.5Q376,355,327.5,385Q279,415,205.5,435Q132,455,100,385.5Q68,316,65,248.5Q62,181,94,108.5Q126,36,202.5,61.5Q279,87,327,116Q375,145,410,197.5Q445,250,410.5,302.5Z;
+                  M412,302Q374,354,326.5,384.5Q279,415,216.5,416Q154,417,125,361.5Q96,306,65,238.5Q34,171,101.5,141Q169,111,223,105Q277,99,336,113.5Q395,128,422.5,189Q450,250,412,302Z;
+                  M443.5,320Q416,390,346,395Q276,400,203,428.5Q130,457,93.5,388.5Q57,320,37,242.5Q17,165,86,125.5Q155,86,222.5,53.5Q290,21,362.5,58Q435,95,453,172.5Q471,250,443.5,320Z
+                  ">
+                  <!-- 最初と最後のパスは同じ -->
+                </animate>
+                </path>
+              </g>
+            </svg>
+          </div>
+          <!-- ver2 -->
+          <div class="maru">
+            <svg viewBox="0 0 800 500" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+              <g transform="translate(153.68674850463867, 12.412059783935547)">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color: rgb(194, 229, 156);"></stop>
+                    <stop offset="100%" style="stop-color: rgb(100, 179, 244);"></stop>
+                  </linearGradient>
+                </defs>
+                <path class="blob" fill="url(#gradient)">
+                  <animate attributeName = "d"
+                  dur = "10000ms"
+                  repeatCount = "indefinite"
+                  values =
+                  "M443.5,320Q416,390,346,395Q276,400,203,428.5Q130,457,93.5,388.5Q57,320,37,242.5Q17,165,86,125.5Q155,86,222.5,53.5Q290,21,362.5,58Q435,95,453,172.5Q471,250,443.5,320Z;
+                  M411.5,321Q419,392,352.5,423Q286,454,226,425Q166,396,132.5,350.5Q99,305,103,251.5Q107,198,123.5,128.5Q140,59,211.5,62Q283,65,339,97Q395,129,399.5,189.5Q404,250,411.5,321Z;
+                  M442,321.5Q421,393,349,399.5Q277,406,221,401.5Q165,397,96.5,364Q28,331,58,261Q88,191,121.5,138Q155,85,224,45Q293,5,333.5,75.5Q374,146,418.5,198Q463,250,442,321.5Z;
+                  M410.5,302.5Q376,355,327.5,385Q279,415,205.5,435Q132,455,100,385.5Q68,316,65,248.5Q62,181,94,108.5Q126,36,202.5,61.5Q279,87,327,116Q375,145,410,197.5Q445,250,410.5,302.5Z;
+                  M412,302Q374,354,326.5,384.5Q279,415,216.5,416Q154,417,125,361.5Q96,306,65,238.5Q34,171,101.5,141Q169,111,223,105Q277,99,336,113.5Q395,128,422.5,189Q450,250,412,302Z;
+                  M443.5,320Q416,390,346,395Q276,400,203,428.5Q130,457,93.5,388.5Q57,320,37,242.5Q17,165,86,125.5Q155,86,222.5,53.5Q290,21,362.5,58Q435,95,453,172.5Q471,250,443.5,320Z
+                  ">
+                  <!-- 最初と最後のパスは同じ -->
+                </animate>
+                </path>
+              </g>
+            </svg>
+          </div>
+  
+        </div>
+  
       </section>
     </main>
+    <script src="https://unpkg.com/wavesurfer.js"></script>
     
+
   </body>
 </html>

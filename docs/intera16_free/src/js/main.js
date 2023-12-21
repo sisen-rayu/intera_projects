@@ -23,19 +23,28 @@ import Rythm from 'rythm.js'
 
 // WaveSurferインスタンスを作成
 // WaveSurfer.jsの設定
+// WaveSurfer.jsの設定
 const wavesurfer = WaveSurfer.create({
   container: '#wave', // 波形を表示するコンテナのID
   waveColor: 'blue', // 波形の色を指定（例: 'blue'）
   progressColor: 'purple', // 進捗バーの色を指定（例: 'purple'）
 });
 
-// Rythm.jsの設定
 const rythm = new Rythm();
 
 // 音楽ファイルのURL
 const musicUrl = './images/73_bpm78.mp3';
 
-// 音楽の再生と停止を制御するためのフラグ
+// Rythm.jsの設定
+rythm.setMusic(musicUrl);
+rythm.startingScale = 0.75; // 最小スケール
+rythm.pulseRatio = 0.30; // パルス比率
+rythm.maxValueHistory = 100; // 最大値の履歴数
+
+// 音楽ファイルを直接WaveSurfer.jsにロード
+wavesurfer.load(musicUrl);
+
+// WaveSurfer.jsの再生状態を格納するフラグ
 let isPlaying = false;
 
 // 再生・停止ボタン
@@ -43,24 +52,21 @@ const playPauseButton = document.getElementById('playPauseButton');
 playPauseButton.addEventListener('click', () => {
   if (!isPlaying) {
     // WaveSurfer.jsを開始してアニメーションを開始
-    wavesurfer.load(musicUrl);
     wavesurfer.play();
-    
-    // Rythm.jsを開始してアニメーションを開始
-    rythm.setMusic(musicUrl);
-    rythm.start();
     
     playPauseButton.textContent = '停止'; // ボタンのテキストを変更
     isPlaying = true;
+    
+    // Rythm.jsを開始してアニメーションを開始
+    rythm.start();
   } else {
     // WaveSurfer.jsのアニメーションを停止
     wavesurfer.pause();
-    wavesurfer.seekTo(0); // オーディオを最初に戻す
-    
-    // Rythm.jsのアニメーションを停止
-    rythm.stop();
     
     playPauseButton.textContent = '再生'; // ボタンのテキストを変更
     isPlaying = false;
+    
+    // Rythm.jsのアニメーションを停止
+    rythm.stop();
   }
 });
